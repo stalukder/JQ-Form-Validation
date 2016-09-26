@@ -12,6 +12,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 	$(function(){ 
+		
+	$("#myform").submit(function(){
+		var err_usernm = false;
+		var err_passwd = false;
+		var err_passwd_again = false;
+		var err_mail = false;
+		if(err_usernm == false && err_passwd == false && err_passwd_again == false && err_mail == false){
+			return true;
+		}else{
+			return false;
+		}
+	});		
+		
 	 $(username_err).hide();
 	 $(password_err).hide();
 	 $(password_ag_err).hide();
@@ -83,17 +96,7 @@
 
 	}); 
 
-	$("#myform").submit(function(){
-		var err_usernm = false;
-		var err_passwd = false;
-		var err_passwd_again = false;
-		var err_mail = false;
-		if(err_usernm == false && err_passwd == false && err_passwd_again == false && err_mail == false){
-			return true;
-		}else{
-			return false;
-		}
-	});
+
 </script>
 </head>
 <body>

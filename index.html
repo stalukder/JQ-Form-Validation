@@ -13,17 +13,7 @@
 <script>
 	$(function(){ 
 		
-	$("#myform").submit(function(){
-		var err_usernm = false;
-		var err_passwd = false;
-		var err_passwd_again = false;
-		var err_mail = false;
-		if(err_usernm == false && err_passwd == false && err_passwd_again == false && err_mail == false){
-			return true;
-		}else{
-			return false;
-		}
-	});		
+	
 		
 	 $(username_err).hide();
 	 $(password_err).hide();
@@ -92,7 +82,14 @@
 	 		err_mail = true;
 	 	}
 	 }
-
+		
+	$("#myform").submit(function(){ 
+		if(err_usernm == false && err_passwd == false && err_passwd_again == false && err_mail == false){
+			return true;
+		}else{
+			return false;
+		}
+	});	
 
 	}); 
 
